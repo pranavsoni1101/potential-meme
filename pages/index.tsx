@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
@@ -9,7 +9,9 @@ const Home: NextPage = () => {
         <>
             <Section>
                 <SectionContent>
-                    Hello From Home
+                    <Heading>
+                        Hi, I'm Pranav, Full Stack Developer
+                    </Heading>
                 </SectionContent>
             </Section>
         </>
