@@ -1,10 +1,9 @@
 import { Box, BoxProps, Flex, 
          useDisclosure, Text, CloseButton,  
          Drawer, Link, DrawerContent,
-         useColorModeValue,
-         Divider,
-         IconButton, 
+         Divider, IconButton, VStack, HStack, 
 } from '@chakra-ui/react';
+import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from "react-icons/fa";
 import React, { ReactNode } from 'react';
 import Logo from "../../../images/logo.svg";
 
@@ -86,6 +85,78 @@ const Sidebar = ({onClose, ...rest}: SidebarProps) => {
                     {link}
                 </NavItem>
             ))}
+            <VStack
+                marginTop = "6em"
+            >
+                <HStack>
+                    <IconButton 
+                        as         = "a"
+                        href       = "https://github.com/pranavsoni1101"
+                        icon       = {<FaGithub />}
+                        variant    = "ghost"
+                        fontSize   = "1.5em"
+                        transition = "0.3s ease-in-out"
+                        aria-label = 'github-button'
+                        _hover     = {{
+                            color: "#DB6C79",
+                            backgroundColod: "none",
+                        }}
+                        _focus     = {{
+                            boxShadow: "none"
+                        }}
+                    />
+                    <IconButton 
+                        as         = "a"
+                        href       = "https://www.linkedin.com/in/pranav-soni-29118a194/"
+                        icon       = {<FaLinkedin />}
+                        variant    = "ghost"
+                        fontSize   = "1.5em"
+                        transition = "0.3s ease-in-out"
+                        aria-label = 'linkedin-button'
+                        _hover     = {{
+                            color: "#DB6C79",
+                            backgroundColod: "none",
+                        }}
+                        _focus     = {{
+                            boxShadow: "none"
+                        }}
+                    />
+                </HStack>
+                <HStack>
+                    <IconButton 
+                        as         = "a"
+                        href       = "#"
+                        icon       = {<FaDiscord />}
+                        variant    = "ghost"
+                        fontSize   = "1.5em"
+                        transition = "0.3s ease-in-out"
+                        aria-label = 'discord-button'
+                        _hover     = {{
+                            color: "#DB6C79",
+                            backgroundColod: "none",
+                        }}
+                        _focus     = {{
+                            boxShadow: "none"
+                        }}
+                    />
+                    <IconButton 
+                        as         = "a"
+                        href       = "https://www.instagram.com/pranavv__11_/?utm_medium=copy_link"
+                        icon       = {<FaInstagram />}
+                        variant    = "ghost"
+                        fontSize   = "1.5em"
+                        transition = "0.3s ease-in-out"
+                        aria-label = 'instagram-button'
+                        _hover     = {{
+                            color: "#DB6C79",
+                            backgroundColod: "none",
+                        }}
+                        _focus     = {{
+                            boxShadow: "none"
+                        }}
+                    />
+                </HStack>
+            </VStack>
         </Box>
     )
 }
