@@ -1,11 +1,20 @@
 import { Box, BoxProps, Flex, 
          useDisclosure, Text, CloseButton,  
-         Drawer,
-         DrawerContent,
-         useColorModeValue, 
+         Drawer, Link, DrawerContent,
+         useColorModeValue,
+         Divider,
+         IconButton, 
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Logo from "../../../images/logo.svg";
+
+// Declaring Sidebar Links
+const LinkItems: Array<string> = [
+    "about", 
+    "work",
+    "skills",
+    "contact"   
+];
 
 const SideNavbar = () => {
 
@@ -42,32 +51,88 @@ interface SidebarProps extends BoxProps {
 const Sidebar = ({onClose, ...rest}: SidebarProps) => {
     return(
         <Box
-            w                = {{base: 'full', md: 60}}
+            w                = {{base: 'full', md: 40}}
             h                = "full"
-            bg               = "gray.900"   
+            bg               = "#111111"   
             pos              = "fixed"
             borderRadius     = "1px"
             borderRightColor = "white" 
             {...rest}
         >
             <Flex>
-                <Text 
-                    fontSize="2xl" 
-                    fontFamily="monospace" 
-                    fontWeight="bold"
+                <Box 
+                    as     = {Link}
+                    href   = "/"
+                    margin = "2em auto 80% auto"
+
+                    _focus = {{
+                        boxShadow: "none"
+                    }}
                 >
-                    Logo
                     <Logo />
-                </Text>
+                </Box>
                 <CloseButton 
                     display = {{ base: "flex", md: "none" }}
                     onClick = {onClose}
                 />
             </Flex>
-
+            <Divider 
+                borderColor= "#A63446"
+            />
+            {LinkItems.map((link) => (
+                <NavItem
+                    link = {link}
+                >
+                    {link}
+                </NavItem>
+            ))}
         </Box>
     )
 }
 
+// Link btn declaration
+interface NavItemProps {
+    children: ReactNode | ReactNode[],
+    link: string
+}
+
+const NavItem = ({children, link, ...rest}: NavItemProps) => {
+    return(
+        <>
+            {/* <Divider /> */}
+            <Link
+                href           = {`${link}`}
+                transition     = "0.35s ease-in-out"
+                textAlign      = "center"
+                textTransform  = "capitalize"
+                textDecoration = "none"
+                _focus         = {{
+                    boxShadow: "none"
+                }}
+                _hover         = {{
+                    textDecoration: "none",
+                    color: '#DB6C79',
+
+                }}
+            >
+                <Box
+                    p            = "2em 0"
+                    mx           = "4"
+                    role         = "group"
+                    cursor       = "pointer"
+                    textAlign    = "center"
+                    fontWeight   = "700"
+                    borderRadius = "lg"
+                    {...rest}
+                >
+                    {children}
+                </Box>
+            </Link>
+            <Divider 
+                borderColor= "#A63446"
+            />
+        </>
+    )
+}
 
 export default SideNavbar;
