@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Heading, Box, Button } from '@chakra-ui/react';
+import { Text, Heading, Box, Button, Link } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
@@ -85,14 +85,23 @@ const Home: NextPage = () => {
                         &lt;p&gt;
                     </Text>
                     <Button
-                        color="#8fc866"
-                        width="xs"
-                        variant="outline"
-                        marginTop="1em"
-                        borderColor="#8fc866"
-                        transition="0.25s ease-in-out"
-                        borderRadius="none"
+                        as             = {Link}
+                        href           = "/contact"
+                        width          = "xs"
+                        color          = "#8fc866"
+                        variant        = "outline"
+                        marginTop      = "1em"
+                        transition     = "0.25s ease-in-out"
+                        borderColor    = "#8fc866"
+                        borderRadius   = "none"
+                        textDecoration = "none"
                         _hover={{
+                            boxShadow: "inset -10em 0 0 0 #66c887, inset 10em 0 0 0 #66c887",
+                            borderColor: "#66c887",
+                            textDecoration: "none",
+                            color: "white"
+                        }}
+                        _focus      = {{
                             boxShadow: "inset -10em 0 0 0 #66c887, inset 10em 0 0 0 #66c887",
                             borderColor: "#66c887",
                             color: "white"

@@ -145,6 +145,11 @@ const Contact: NextPage = () => {
                                 borderColor: "#66c887",
                                 color: "white"
                             }}
+                            _focus      = {{
+                                boxShadow: "inset -10em 0 0 0 #66c887, inset 10em 0 0 0 #66c887",
+                                borderColor: "#66c887",
+                                color: "white"
+                            }}
                         >
                             Submit
                         </Button>
