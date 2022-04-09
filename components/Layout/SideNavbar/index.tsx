@@ -78,8 +78,9 @@ const Sidebar = ({onClose, ...rest}: SidebarProps) => {
             <Divider 
                 borderColor= "#A63446"
             />
-            {LinkItems.map((link) => (
+            {LinkItems.map((link, index) => (
                 <NavItem
+                    key = {index}
                     link = {link}
                 >
                     {link}
