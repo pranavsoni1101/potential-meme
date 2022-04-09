@@ -1,10 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import { Text, Heading, Box, Button } from '@chakra-ui/react';
+import { Text, Heading, Box} from '@chakra-ui/react';
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
+import { NextPage } from 'next';
 
-const About = () => {
+const About: NextPage = () => {
     return(
         <>
             <Head>
@@ -37,9 +38,10 @@ const About = () => {
                             fontSize   = "1.4em"
                             fontFamily = "'Waiting for the Sunrise', cursive"
                         >
-                            &lt;h2&gt;
+                            &lt;h1&gt;
                         </Text>
                         <Heading
+                            as      = "h1" 
                             size    = "3xl"
                             color   = "#DB6C79"
                             display = "inline-block"
@@ -53,7 +55,7 @@ const About = () => {
                             marginLeft = "4%"
                             fontFamily = "'Waiting for the Sunrise', cursive"
                         >
-                            &lt;/h2&gt;
+                            &lt;/h1&gt;
                         </Text>
                     </Box>
                     <Text

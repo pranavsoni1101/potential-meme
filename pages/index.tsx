@@ -89,7 +89,6 @@ const Home: NextPage = () => {
                         width="xs"
                         variant="outline"
                         marginTop="1em"
-                        fontWeight="500"
                         borderColor="#8fc866"
                         transition="0.25s ease-in-out"
                         borderRadius="none"
