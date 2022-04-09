@@ -72,7 +72,6 @@ const Home: NextPage = () => {
                     <Box>
                         <Text
                             color="gray"
-                            // fontWeight = "bold"
                             fontSize='2xl'
                         >
                             Designing Web Applications using MERN Stack.
