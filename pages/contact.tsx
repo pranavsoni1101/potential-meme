@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import { Text, Heading, Box, 
          FormControl, FormLabel, Input, 
@@ -10,7 +10,30 @@ import { BsFillPersonFill } from "react-icons/bs";
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
 
+type ContactState = {
+    name: string | undefined,
+    email: string | undefined,
+    message: string | undefined,
+    [key: string]: string | undefined,
+}
+
 const Contact: NextPage = () => {
+
+    const [state, setState] = useState<ContactState>({
+        name: "",
+        email: "",
+        message: ""
+    });
+
+    const handleChange = (event: any) => {
+        // const nameInput = [event.target.name];
+        // const value = event.target.value;
+        setState({
+            ...state,
+            [event.target.name]: event.target.value,
+        })
+    }
+
     return(
         <>
             <Head>
@@ -84,6 +107,8 @@ const Contact: NextPage = () => {
                                 <Input 
                                     type         = "text"
                                     name         = 'name'
+                                    value        = {state.name}
+                                    onChange     = {handleChange}
                                     placeholder  = 'Name'
                                     autoComplete = 'off'
                                     _hover       = {{
@@ -104,6 +129,8 @@ const Contact: NextPage = () => {
                                 <Input 
                                     type         = "text"
                                     name         = 'email'
+                                    value        = {state.email}
+                                    onChange     = {handleChange}
                                     placeholder  = 'Email'
                                     autoComplete = 'off'
                                     _hover       = {{
@@ -122,8 +149,10 @@ const Contact: NextPage = () => {
                             <Textarea 
                                 name        = 'message'
                                 rows        = {5}
-                                placeholder = 'Message'
                                 resize      = "none"
+                                value        = {state.message}
+                                onChange     = {handleChange}
+                                placeholder = 'Message'
                                 _hover       = {{
                                     borderColor: "#DB6C79"
                                 }}
