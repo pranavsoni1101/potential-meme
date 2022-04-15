@@ -80,6 +80,25 @@ const Work: NextPage = () => {
                     >
                         &lt;/main&gt;
                     </Text>
+                    <Box
+                        marginTop="5%"
+                    >
+                        <Text
+                            color="rgba(42,238,234)"
+                            fontSize="1.4em"
+                            fontFamily="'Waiting for the Sunrise', cursive"
+                        >
+                            &lt;/body&gt;
+                        </Text>
+                        <Text
+                            color="rgba(42,238,234)"
+                            fontSize="1.4em"
+                            marginLeft="-2em"
+                            fontFamily="'Waiting for the Sunrise', cursive"
+                        >
+                            &lt;/html&gt;
+                        </Text>
+                    </Box>
                 </SectionContent>
             </Section>
         </>
