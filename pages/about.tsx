@@ -11,8 +11,7 @@ const About: NextPage = () => {
     return(
         <>
             <Head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet" />
+                <title>About Me</title>
             </Head>
             <Section>
                 <SectionContent>
