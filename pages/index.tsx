@@ -14,23 +14,8 @@ const Home: NextPage = () => {
             </Head>
             <Section>
                 <SectionContent>
-                    <Text
-                        color="rgba(42,238,234)"
-                        fontSize="1.4em"
-                        marginLeft="-2em"
-                        fontFamily="'Waiting for the Sunrise', cursive"
-                    >
-                        &lt;html&gt;
-                    </Text>
-                    <Text
-                        color="rgba(42,238,234)"
-                        fontSize="1.4em"
-                        fontFamily="'Waiting for the Sunrise', cursive"
-                    >
-                        &lt;body&gt;
-                    </Text>
                     <Box
-                        marginTop="10%"
+                        marginTop="8%"
                         marginBottom="1em"
                     >
                         <Text
@@ -43,7 +28,6 @@ const Home: NextPage = () => {
                         <Heading
                             as="h1"
                             size="4xl"
-                            display="inline-block"
                             fontSize="8xl"
                         >
                             Hi,
@@ -54,9 +38,7 @@ const Home: NextPage = () => {
                         </Heading>
                         <Text
                             color="rgba(42,238,234)"
-                            display="inline-block"
                             fontSize="1.4em"
-                            marginLeft="4%"
                             fontFamily="'Waiting for the Sunrise', cursive"
                         >
                             &lt;/h1&gt;
@@ -109,25 +91,6 @@ const Home: NextPage = () => {
                     >
                         Contact Me
                     </Button>
-                    <Box
-                        marginTop="5%"
-                    >
-                        <Text
-                            color="rgba(42,238,234)"
-                            fontSize="1.4em"
-                            fontFamily="'Waiting for the Sunrise', cursive"
-                        >
-                            &lt;/body&gt;
-                        </Text>
-                        <Text
-                            color="rgba(42,238,234)"
-                            fontSize="1.4em"
-                            marginLeft="-2em"
-                            fontFamily="'Waiting for the Sunrise', cursive"
-                        >
-                            &lt;/html&gt;
-                        </Text>
-                    </Box>
                 </SectionContent>
             </Section>
         </>
