@@ -9,7 +9,9 @@ import { MdOutlineEmail, MdOutlineMessage } from "react-icons/md";
 import { BsFillPersonFill } from "react-icons/bs";
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
+// Decorative styling tags
 import H1 from '../components/StylingTags/H1';
+import Form from '../components/StylingTags/Form';
 
 type ContactState = {
     name: string | undefined,
@@ -27,8 +29,6 @@ const Contact: NextPage = () => {
     });
 
     const handleChange = (event: any) => {
-        // const nameInput = [event.target.name];
-        // const value = event.target.value;
         setState({
             ...state,
             [event.target.name]: event.target.value,
@@ -39,8 +39,6 @@ const Contact: NextPage = () => {
         <>
             <Head>
                 <title>Contact Me!!</title>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet" />
             </Head>
             <Section>
                 <SectionContent>
@@ -56,106 +54,93 @@ const Contact: NextPage = () => {
                     <Box
                         width = "md"
                     >
-                        <Text
-                            color        = "rgba(42,238,234)"
-                            fontSize     = "1.4em"
-                            fontFamily   = "'Waiting for the Sunrise', cursive"
-                            marginBottom = "0.5em"
-                        >
-                            &lt;form&gt;
-                        </Text>
-                        <FormControl
-                            marginBottom= "1em"
-                        >
-                            <FormLabel htmlFor='name'>Name</FormLabel>
-                            <InputGroup>
-                                <InputLeftElement children = {<BsFillPersonFill />} />
-                                <Input 
-                                    type         = "text"
-                                    name         = 'name'
-                                    value        = {state.name}
+                        <Form>
+                            <FormControl
+                                marginBottom= "1em"
+                            >
+                                <FormLabel htmlFor='name'>Name</FormLabel>
+                                <InputGroup>
+                                    <InputLeftElement children = {<BsFillPersonFill />} />
+                                    <Input 
+                                        type         = "text"
+                                        name         = 'name'
+                                        value        = {state.name}
+                                        onChange     = {handleChange}
+                                        placeholder  = 'Name'
+                                        autoComplete = 'off'
+                                        _hover       = {{
+                                            borderColor: "#DB6C79",
+                                        }}
+                                        _focus       = {{
+                                            borderColor: "#DB6C79",
+                                        }}
+                                    />
+                                </InputGroup>
+                            </FormControl>
+                            <FormControl
+                                marginBottom= "1em"
+                            >   
+                                <FormLabel htmlFor='email'>Email</FormLabel> 
+                                <InputGroup>
+                                    <InputLeftElement children = {<MdOutlineEmail />} />
+                                    <Input 
+                                        type         = "text"
+                                        name         = 'email'
+                                        value        = {state.email}
+                                        onChange     = {handleChange}
+                                        placeholder  = 'Email'
+                                        autoComplete = 'off'
+                                        _hover       = {{
+                                            borderColor: "#DB6C79",
+                                        }}
+                                        _focus       = {{
+                                            borderColor: "#DB6C79",
+                                        }}
+                                    />
+                                </InputGroup>
+                            </FormControl>
+                            <FormControl
+                                marginBottom = "1em"
+                            >
+                                <FormLabel htmlFor='message'>Message</FormLabel>
+                                <Textarea 
+                                    name        = 'message'
+                                    rows        = {5}
+                                    resize      = "none"
+                                    value        = {state.message}
                                     onChange     = {handleChange}
-                                    placeholder  = 'Name'
-                                    autoComplete = 'off'
+                                    placeholder = 'Message'
                                     _hover       = {{
-                                        borderColor: "#DB6C79",
+                                        borderColor: "#DB6C79"
                                     }}
                                     _focus       = {{
-                                        borderColor: "#DB6C79",
+                                        borderColor: "#DB6C79"
                                     }}
                                 />
-                            </InputGroup>
-                        </FormControl>
-                        <FormControl
-                            marginBottom= "1em"
-                        >   
-                            <FormLabel htmlFor='email'>Email</FormLabel> 
-                            <InputGroup>
-                                <InputLeftElement children = {<MdOutlineEmail />} />
-                                <Input 
-                                    type         = "text"
-                                    name         = 'email'
-                                    value        = {state.email}
-                                    onChange     = {handleChange}
-                                    placeholder  = 'Email'
-                                    autoComplete = 'off'
-                                    _hover       = {{
-                                        borderColor: "#DB6C79",
-                                    }}
-                                    _focus       = {{
-                                        borderColor: "#DB6C79",
-                                    }}
-                                />
-                            </InputGroup>
-                        </FormControl>
-                        <FormControl
-                            marginBottom = "1em"
-                        >
-                            <FormLabel htmlFor='message'>Message</FormLabel>
-                            <Textarea 
-                                name        = 'message'
-                                rows        = {5}
-                                resize      = "none"
-                                value        = {state.message}
-                                onChange     = {handleChange}
-                                placeholder = 'Message'
+                            </FormControl>
+                            <Button
+                                width        = "2xs"
+                                color        = "#8fc866"
+                                variant      = "outline"
+                                marginTop    = "1em"
+                                borderColor  = "#8fc866"
+                                marginBottom = "8px"
+                                transition   = "0.25s ease-in-out"
+                                borderRadius = "none"
                                 _hover       = {{
-                                    borderColor: "#DB6C79"
+                                    boxShadow: "inset -10em 0 0 0 #66c887, inset 10em 0 0 0 #66c887",
+                                    borderColor: "#66c887",
+                                    color: "white"
                                 }}
-                                _focus       = {{
-                                    borderColor: "#DB6C79"
+                                _focus      = {{
+                                    boxShadow: "inset -10em 0 0 0 #66c887, inset 10em 0 0 0 #66c887",
+                                    borderColor: "#66c887",
+                                    color: "white"
                                 }}
-                            />
-                        </FormControl>
-                        <Button
-                            width        = "2xs"
-                            color        = "#8fc866"
-                            variant      = "outline"
-                            marginTop    = "1em"
-                            borderColor  = "#8fc866"
-                            transition   = "0.25s ease-in-out"
-                            borderRadius = "none"
-                            _hover       = {{
-                                boxShadow: "inset -10em 0 0 0 #66c887, inset 10em 0 0 0 #66c887",
-                                borderColor: "#66c887",
-                                color: "white"
-                            }}
-                            _focus      = {{
-                                boxShadow: "inset -10em 0 0 0 #66c887, inset 10em 0 0 0 #66c887",
-                                borderColor: "#66c887",
-                                color: "white"
-                            }}
-                        >
-                            Submit
-                        </Button>
-                        <Text
-                            color      = "rgba(42,238,234)"
-                            fontSize   = "1.4em"
-                            fontFamily = "'Waiting for the Sunrise', cursive"
-                            marginTop  = "0.5em"
-                        >
-                            &lt;/form&gt;
-                        </Text>
+                            >
+                                Submit
+                            </Button>
+                        </Form>
                     </Box>
                 </SectionContent>
             </Section>
