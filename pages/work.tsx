@@ -7,14 +7,15 @@ import { Text, Heading, Box,
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
 import WorkCard from '../components/Work/WorkCard';
+// Decorative styling tags ehehe
 import H1 from '../components/StylingTags/H1';
+import MainTag from '../components/StylingTags/MainTag';
 
 const Work: NextPage = () => {
     return(
         <>
             <Head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet" />
+                <title>Self Brewed Projects!</title>
             </Head>
             <Section>
                 <SectionContent>
@@ -27,25 +28,13 @@ const Work: NextPage = () => {
                             Self Brewed Projects
                         </Heading>
                     </H1>
-                    <Text
-                        color      = "rgba(42,238,234)"
-                        display    = "inline-block"
-                        fontSize   = "1.4em"
-                        fontFamily = "'Waiting for the Sunrise', cursive"
-                    >
-                        &lt;main&gt;
-                    </Text>
-                    <Box>
-                        <WorkCard />
-                    </Box>
-                    <Text
-                        color      = "rgba(42,238,234)"
-                        display    = "inline-block"
-                        fontSize   = "1.4em"
-                        fontFamily = "'Waiting for the Sunrise', cursive"
-                    >
-                        &lt;/main&gt;
-                    </Text>
+                    <MainTag>
+                        <Box>
+                            <WorkCard />
+                        </Box>
+
+                    </MainTag>
+                    
                 </SectionContent>
             </Section>
         </>

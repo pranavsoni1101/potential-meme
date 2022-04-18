@@ -4,6 +4,7 @@ import { Text, Heading, Box} from '@chakra-ui/react';
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
 import { NextPage } from 'next';
+// Styling tags hehe
 import H1 from '../components/StylingTags/H1';
 import P from '../components/StylingTags/P';
 
