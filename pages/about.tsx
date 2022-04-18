@@ -4,6 +4,7 @@ import { Text, Heading, Box} from '@chakra-ui/react';
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
 import { NextPage } from 'next';
+import H1 from '../components/StylingTags/H1';
 
 const About: NextPage = () => {
     return(
@@ -14,17 +15,7 @@ const About: NextPage = () => {
             </Head>
             <Section>
                 <SectionContent>
-                    <Box
-                        marginTop = "5%"
-                        marginBottom="1em"
-                    >
-                        <Text
-                            color      = "rgba(42,238,234)"
-                            fontSize   = "1.4em"
-                            fontFamily = "'Waiting for the Sunrise', cursive"
-                        >
-                            &lt;h1&gt;
-                        </Text>
+                    <H1>
                         <Heading
                             as      = "h1" 
                             size    = "3xl"
@@ -33,16 +24,7 @@ const About: NextPage = () => {
                         >
                             Me, Myself &amp; I
                         </Heading>
-                        <Text
-                            color      = "rgba(42,238,234)"
-                            display    = "inline-block"
-                            fontSize   = "1.4em"
-                            marginLeft = "4%"
-                            fontFamily = "'Waiting for the Sunrise', cursive"
-                        >
-                            &lt;/h1&gt;
-                        </Text>
-                    </Box>
+                    </H1>                   
                     <Text
                         color="rgba(42,238,234)"
                         fontSize="1.4em"
@@ -57,7 +39,6 @@ const About: NextPage = () => {
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui porttitor, hendrerit risus eget, dapibus sapien. 
                             Aliquam ultrices nibh nibh, quis rhoncus augue dictum vel. Proin commodo lorem quam, id faucibus nulla eleifend vel. 
                             Cras vitae mollis eros. Mauris nec congue libero, laoreet tincidunt magna. 
-                            Nulla ligula ligula, pellentesque quis nunc sed, elementum consequat lorem. 
                             <br /> <br /> 
                             Nulla tincidunt ex non ipsum pharetra, a finibus augue sodales. 
                             Etiam erat felis, varius ultricies elit sit amet, facilisis imperdiet ipsum. 

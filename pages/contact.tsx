@@ -9,6 +9,7 @@ import { MdOutlineEmail, MdOutlineMessage } from "react-icons/md";
 import { BsFillPersonFill } from "react-icons/bs";
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
+import H1 from '../components/StylingTags/H1';
 
 type ContactState = {
     name: string | undefined,
@@ -43,35 +44,15 @@ const Contact: NextPage = () => {
             </Head>
             <Section>
                 <SectionContent>
-                    <Box
-                        marginTop = "5%"
-                        marginBottom="1em"
-                    >
-                        <Text
-                            color      = "rgba(42,238,234)"
-                            fontSize   = "1.4em"
-                            fontFamily = "'Waiting for the Sunrise', cursive"
-                        >
-                            &lt;h1&gt;
-                        </Text>
+                    <H1>
                         <Heading
                             as      = "h1"
                             size    = "3xl"
                             color   = "#DB6C79"
-                            display = "inline-block"
                         >
                             Get in Touch
                         </Heading>
-                        <Text
-                            color      = "rgba(42,238,234)"
-                            display    = "inline-block"
-                            fontSize   = "1.4em"
-                            marginLeft = "4%"
-                            fontFamily = "'Waiting for the Sunrise', cursive"
-                        >
-                            &lt;/h1&gt;
-                        </Text>
-                    </Box>
+                    </H1>
                     <Box
                         width = "md"
                     >

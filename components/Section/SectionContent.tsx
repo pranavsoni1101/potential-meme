@@ -14,7 +14,7 @@ const SectionContent = ({ children }: SectionContentProps) => (
     </Head>
     <Box width="100%">
       <Box
-        marginBottom= "5%"
+        marginBottom= "4%"
       >
         <Text
             color      = "rgba(42,238,234)"
@@ -34,7 +34,7 @@ const SectionContent = ({ children }: SectionContentProps) => (
       </Box>
       {children}
       <Box
-          marginTop="5%"
+          marginTop="4%"
       >
           <Text
               color="rgba(42,238,234)"

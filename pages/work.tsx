@@ -7,6 +7,7 @@ import { Text, Heading, Box,
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
 import WorkCard from '../components/Work/WorkCard';
+import H1 from '../components/StylingTags/H1';
 
 const Work: NextPage = () => {
     return(
@@ -17,17 +18,7 @@ const Work: NextPage = () => {
             </Head>
             <Section>
                 <SectionContent>
-                    <Box
-                        marginTop = "5%"
-                        marginBottom="1em"
-                    >
-                        <Text
-                            color      = "rgba(42,238,234)"
-                            fontSize   = "1.4em"
-                            fontFamily = "'Waiting for the Sunrise', cursive"
-                        >
-                            &lt;h1&gt;
-                        </Text>
+                    <H1>
                         <Heading
                             as      = "h1"
                             size    = "3xl"
@@ -35,14 +26,7 @@ const Work: NextPage = () => {
                         >
                             Self Brewed Projects
                         </Heading>
-                        <Text
-                            color      = "rgba(42,238,234)"
-                            fontSize   = "1.4em"
-                            fontFamily = "'Waiting for the Sunrise', cursive"
-                        >
-                            &lt;/h1&gt;
-                        </Text>
-                    </Box>
+                    </H1>
                     <Text
                         color      = "rgba(42,238,234)"
                         display    = "inline-block"

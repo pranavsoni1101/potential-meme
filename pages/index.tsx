@@ -4,6 +4,7 @@ import { NextPage } from 'next';
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
 import Head from 'next/head';
+import H1 from '../components/StylingTags/H1';
 
 const Home: NextPage = () => {
     return (
@@ -14,17 +15,7 @@ const Home: NextPage = () => {
             </Head>
             <Section>
                 <SectionContent>
-                    <Box
-                        marginTop="8%"
-                        marginBottom="1em"
-                    >
-                        <Text
-                            color="rgba(42,238,234)"
-                            fontSize="1.4em"
-                            fontFamily="'Waiting for the Sunrise', cursive"
-                        >
-                            &lt;h1&gt;
-                        </Text>
+                    <H1>
                         <Heading
                             as="h1"
                             size="4xl"
@@ -36,14 +27,7 @@ const Home: NextPage = () => {
                             <br />
                             Full Stack Developer.
                         </Heading>
-                        <Text
-                            color="rgba(42,238,234)"
-                            fontSize="1.4em"
-                            fontFamily="'Waiting for the Sunrise', cursive"
-                        >
-                            &lt;/h1&gt;
-                        </Text>
-                    </Box>
+                    </H1>
                     <Text
                         color="rgba(42,238,234)"
                         fontSize="1.4em"
