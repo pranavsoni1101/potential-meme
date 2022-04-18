@@ -5,6 +5,7 @@ import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
 import { NextPage } from 'next';
 import H1 from '../components/StylingTags/H1';
+import P from '../components/StylingTags/P';
 
 const About: NextPage = () => {
     return(
@@ -25,38 +26,26 @@ const About: NextPage = () => {
                             Me, Myself &amp; I
                         </Heading>
                     </H1>                   
-                    <Text
-                        color="rgba(42,238,234)"
-                        fontSize="1.4em"
-                        fontFamily="'Waiting for the Sunrise', cursive"
-                    >
-                        &lt;p&gt;
-                    </Text>
-                    <Box width= "50%">
-                        <Text
-                            fontSize='xl'
-                        >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui porttitor, hendrerit risus eget, dapibus sapien. 
-                            Aliquam ultrices nibh nibh, quis rhoncus augue dictum vel. Proin commodo lorem quam, id faucibus nulla eleifend vel. 
-                            Cras vitae mollis eros. Mauris nec congue libero, laoreet tincidunt magna. 
-                            <br /> <br /> 
-                            Nulla tincidunt ex non ipsum pharetra, a finibus augue sodales. 
-                            Etiam erat felis, varius ultricies elit sit amet, facilisis imperdiet ipsum. 
-                            Quisque suscipit mi quis facilisis scelerisque. Vivamus porta massa eleifend dapibus finibus. 
-                            In hac habitasse platea dictumst. Proin semper ultrices fermentum.
-                            <br /> <br /> 
-                            Etiam erat felis, varius ultricies elit sit amet, facilisis imperdiet ipsum. 
-                            Quisque suscipit mi quis facilisis scelerisque. Vivamus porta massa eleifend dapibus finibus. 
-                            In hac habitasse platea dictumst. Proin semper ultrices fermentum.
-                        </Text>
-                    </Box>
-                    <Text
-                        color="rgba(42,238,234)"
-                        fontSize="1.4em"
-                        fontFamily="'Waiting for the Sunrise', cursive"
-                    >
-                        &lt;p&gt;
-                    </Text>
+                    <P>
+                        <Box width= "50%">
+                            <Text
+                                fontSize='xl'
+                            >
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui porttitor, hendrerit risus eget, dapibus sapien. 
+                                Aliquam ultrices nibh nibh, quis rhoncus augue dictum vel. Proin commodo lorem quam, id faucibus nulla eleifend vel. 
+                                Cras vitae mollis eros. Mauris nec congue libero, laoreet tincidunt magna. 
+                                <br /> <br /> 
+                                Nulla tincidunt ex non ipsum pharetra, a finibus augue sodales. 
+                                Etiam erat felis, varius ultricies elit sit amet, facilisis imperdiet ipsum. 
+                                Quisque suscipit mi quis facilisis scelerisque. Vivamus porta massa eleifend dapibus finibus. 
+                                In hac habitasse platea dictumst. Proin semper ultrices fermentum.
+                                <br /> <br /> 
+                                Etiam erat felis, varius ultricies elit sit amet, facilisis imperdiet ipsum. 
+                                Quisque suscipit mi quis facilisis scelerisque. Vivamus porta massa eleifend dapibus finibus. 
+                                In hac habitasse platea dictumst. Proin semper ultrices fermentum.
+                            </Text>
+                        </Box>
+                    </P>
                 </SectionContent>
             </Section>
         </>

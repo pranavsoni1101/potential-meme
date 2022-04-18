@@ -5,6 +5,7 @@ import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
 import Head from 'next/head';
 import H1 from '../components/StylingTags/H1';
+import P from '../components/StylingTags/P';
 
 const Home: NextPage = () => {
     return (
@@ -28,28 +29,16 @@ const Home: NextPage = () => {
                             Full Stack Developer.
                         </Heading>
                     </H1>
-                    <Text
-                        color="rgba(42,238,234)"
-                        fontSize="1.4em"
-                        fontFamily="'Waiting for the Sunrise', cursive"
-                    >
-                        &lt;p&gt;
-                    </Text>
-                    <Box>
-                        <Text
-                            color="gray"
-                            fontSize='2xl'
-                        >
-                            Designing Web Applications using MERN Stack.
-                        </Text>
-                    </Box>
-                    <Text
-                        color="rgba(42,238,234)"
-                        fontSize="1.4em"
-                        fontFamily="'Waiting for the Sunrise', cursive"
-                    >
-                        &lt;p&gt;
-                    </Text>
+                    <P>
+                        <Box>
+                            <Text
+                                color="gray"
+                                fontSize='2xl'
+                            >
+                                Designing Web Applications using MERN Stack.
+                            </Text>
+                        </Box>
+                    </P>
                     <Button
                         as             = {Link}
                         href           = "/contact"
