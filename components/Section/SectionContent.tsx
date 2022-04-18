@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import Head from 'next/head';
 import { Box, Text } from '@chakra-ui/react';
 
 interface SectionContentProps {
@@ -8,10 +7,6 @@ interface SectionContentProps {
 
 const SectionContent = ({ children }: SectionContentProps) => (
   <>
-    <Head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet" />
-    </Head>
     <Box width="100%">
       <Box
         marginBottom= "4%"

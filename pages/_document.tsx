@@ -13,6 +13,8 @@ class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet" />
+                    <link rel="preconnect" href="https://fonts.googleapis.com" />
+                    <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet" />
                 </Head>
                 <body>
                     <Main />
