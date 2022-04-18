@@ -4,6 +4,7 @@ import { NextPage } from 'next';
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
 import Head from 'next/head';
+// Decorative style tags hehe
 import H1 from '../components/StylingTags/H1';
 import P from '../components/StylingTags/P';
 
@@ -11,8 +12,7 @@ const Home: NextPage = () => {
     return (
         <>
             <Head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet" />
+                <title>Pranav Soni</title>
             </Head>
             <Section>
                 <SectionContent>
