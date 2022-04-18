@@ -10,6 +10,7 @@ import { Text, Box, Heading,
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
 import H1 from '../components/StylingTags/H1';
+import P from '../components/StylingTags/P';
 
 const Skills: NextPage = () => {
     return(
@@ -18,8 +19,6 @@ const Skills: NextPage = () => {
                 <title>
                     Skills & Experience
                 </title>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet" />
             </Head>
             <Section>
                 <SectionContent>
@@ -41,36 +40,23 @@ const Skills: NextPage = () => {
                             colStart={1}
                             colEnd   = {7} 
                         >
-                            <Text
-                                color="rgba(42,238,234)"
-                                fontSize="1.4em"
-                                fontFamily="'Waiting for the Sunrise', cursive"
-                            >
-                                &lt;p&gt;
-                            </Text>
-                            <Text
-                                fontSize='lg'
-                            >
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui porttitor, hendrerit risus eget, dapibus sapien. 
-                                Aliquam ultrices nibh nibh, quis rhoncus augue dictum vel. Proin commodo lorem quam, id faucibus nulla eleifend vel. 
-                                Cras vitae mollis eros. Mauris nec congue libero, laoreet tincidunt magna. 
-                                Nulla ligula ligula, pellentesque quis nunc sed, elementum consequat lorem. 
-                                <br /> <br /> 
-                                Etiam erat felis, varius ultricies elit sit amet, facilisis imperdiet ipsum. 
-                                Quisque suscipit mi quis facilisis scelerisque. Vivamus porta massa eleifend dapibus finibus. 
-                                In hac habitasse platea dictumst. Proin semper ultrices fermentum.
-                            </Text>
-                            <Text
-                                color="rgba(42,238,234)"
-                                fontSize="1.4em"
-                                fontFamily="'Waiting for the Sunrise', cursive"
-                            >
-                                &lt;/p&gt;
-                            </Text>
+                            <P>
+                                <Text
+                                    fontSize='lg'
+                                >
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dui porttitor, hendrerit risus eget, dapibus sapien. 
+                                    Aliquam ultrices nibh nibh, quis rhoncus augue dictum vel. Proin commodo lorem quam, id faucibus nulla eleifend vel. 
+                                    Cras vitae mollis eros. Mauris nec congue libero, laoreet tincidunt magna. 
+                                    Nulla ligula ligula, pellentesque quis nunc sed, elementum consequat lorem. 
+                                    <br /> <br /> 
+                                    Etiam erat felis, varius ultricies elit sit amet, facilisis imperdiet ipsum. 
+                                    Quisque suscipit mi quis facilisis scelerisque. Vivamus porta massa eleifend dapibus finibus. 
+                                    In hac habitasse platea dictumst. Proin semper ultrices fermentum.
+                                </Text>
+                            </P>
                         </GridItem>
                         <GridItem
                             colEnd   = {12} 
-                            // colSpan  = {5}
                             colStart = {8}
                         >
                             <Stack
