@@ -2,11 +2,9 @@ import { NextPage } from 'next';
 import React from 'react';
 import Head from 'next/head';
 import { Text, Box, Heading, 
-         Grid,
-         GridItem,
-         Progress,
-         Stack, 
+         Grid, GridItem, Stack,
        } from '@chakra-ui/react';
+import { FaNodeJs, FaReact, FaPython } from "react-icons/fa";
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
 // Decoratvie styling tags hehe
@@ -64,65 +62,53 @@ const Skills: NextPage = () => {
                                 paddingTop = "1em"
                                 spacing ={5}
                             >
-                                <Box>
-                                    <Heading
-                                        size = "sm"
-                                        marginBottom = "8px" 
-                                    >
-                                        Frontend
-                                    </Heading>
-                                    <Progress 
-                                        bg     = "#444"
-                                        value  = {90}
-                                        height = "2px"
-                                        colorScheme = "purple"
-                                    />
+                                <Box
+                                    p            = "16px" 
+                                    color        = "cyan"
+                                    border       = "4px solid green"   
+                                    width        = "fit-content"
+                                    fontSize     = "2em"
+                                    borderRadius = "1000px"
+                                >
+                                    <FaNodeJs />
                                 </Box>
-                                {/* React Progress */}
-                                <Box>
-                                    <Heading
-                                        size = "sm"
-                                        marginBottom = "8px" 
-                                    >
-                                        ReactJS
-                                    </Heading>
-                                    <Progress 
-                                        bg     = "#444"
-                                        value  = {80}
-                                        height = "2px"
-                                        colorScheme = "pink"
-                                    />
-                                </Box>
-                                {/* Backend Progress */}
-                                <Box>
-                                    <Heading
-                                        size = "sm"
-                                        marginBottom = "8px" 
-                                    >
-                                        Backend
-                                    </Heading>
-                                    <Progress 
-                                        bg     = "#444"
-                                        value  = {70}
-                                        height = "2px"
-                                        colorScheme = "cyan"
-                                    />
-                                </Box>
-                                {/* NextJS Progress */}
-                                <Box>
-                                    <Heading
-                                        size = "sm"
-                                        marginBottom = "8px" 
-                                    >
-                                        NextJS
-                                    </Heading>
-                                    <Progress 
-                                        bg     = "#444"
-                                        value  = {60}
-                                        height = "2px"
-                                        colorScheme = "yellow"
-                                    />
-                                </Box>
+                                <Box
+                                    p            = "16px" 
+                                    color        = "cyan"
+                                    border       = "4px solid green"   
+                                    width        = "fit-content"
+                                    fontSize     = "2em"
+                                    borderRadius = "1000px"
+                                >
+                                    <FaReact />
+                                </Box><Box
+                                    p            = "16px" 
+                                    color        = "cyan"
+                                    border       = "4px solid green"   
+                                    width        = "fit-content"
+                                    fontSize     = "2em"
+                                    borderRadius = "1000px"
+                                >
+                                    <FaPython />
+                                </Box><Box
+                                    p            = "16px" 
+                                    color        = "cyan"
+                                    border       = "4px solid green"   
+                                    width        = "fit-content"
+                                    fontSize     = "2em"
+                                    borderRadius = "1000px"
+                                >
+                                    <FaNodeJs />
+                                </Box><Box
+                                    p            = "16px" 
+                                    color        = "cyan"
+                                    border       = "4px solid green"   
+                                    width        = "fit-content"
+                                    fontSize     = "2em"
+                                    borderRadius = "1000px"
+                                >
+                                    <FaNodeJs />
+                                </Box>  
                             </Stack>
                         </GridItem>
                     </Grid>
