@@ -4,7 +4,8 @@ import Head from 'next/head';
 import { Text, Box, Heading, 
          Grid, GridItem, Stack,
        } from '@chakra-ui/react';
-import { FaNodeJs, FaReact, FaPython } from "react-icons/fa";
+import { SiJavascript, SiTypescript } from "react-icons/si";
+import { FaNodeJs, FaReact, FaPython, FaGithub } from "react-icons/fa";
 import Section from '../components/Section';
 import SectionContent from '../components/Section/SectionContent';
 // Decoratvie styling tags hehe
@@ -12,6 +13,30 @@ import H1 from '../components/StylingTags/H1';
 import P from '../components/StylingTags/P';
 
 const Skills: NextPage = () => {
+
+    const skills = [
+        {
+            name: "NodeJS",
+            icon: <FaNodeJs />
+        },
+        {
+            name: "React",
+            icon: <FaReact />
+        },
+        {
+            name: "Python",
+            icon: <FaPython />
+        },
+        {
+            name: "GitHub",
+            icon: <FaGithub />
+        },
+        {
+            name: "Typescript",
+            icon: <FaNodeJs />
+        }
+    ]
+
     return(
         <>
             <Head>
@@ -59,56 +84,36 @@ const Skills: NextPage = () => {
                             colStart = {8}
                         >
                             <Stack
-                                paddingTop = "1em"
                                 spacing ={5}
+                                direction = {['column', 'row']}
+                                paddingTop = "1em"
                             >
-                                <Box
-                                    p            = "16px" 
-                                    color        = "cyan"
-                                    border       = "4px solid green"   
-                                    width        = "fit-content"
-                                    fontSize     = "2em"
-                                    borderRadius = "1000px"
-                                >
-                                    <FaNodeJs />
-                                </Box>
-                                <Box
-                                    p            = "16px" 
-                                    color        = "cyan"
-                                    border       = "4px solid green"   
-                                    width        = "fit-content"
-                                    fontSize     = "2em"
-                                    borderRadius = "1000px"
-                                >
-                                    <FaReact />
-                                </Box><Box
-                                    p            = "16px" 
-                                    color        = "cyan"
-                                    border       = "4px solid green"   
-                                    width        = "fit-content"
-                                    fontSize     = "2em"
-                                    borderRadius = "1000px"
-                                >
-                                    <FaPython />
-                                </Box><Box
-                                    p            = "16px" 
-                                    color        = "cyan"
-                                    border       = "4px solid green"   
-                                    width        = "fit-content"
-                                    fontSize     = "2em"
-                                    borderRadius = "1000px"
-                                >
-                                    <FaNodeJs />
-                                </Box><Box
-                                    p            = "16px" 
-                                    color        = "cyan"
-                                    border       = "4px solid green"   
-                                    width        = "fit-content"
-                                    fontSize     = "2em"
-                                    borderRadius = "1000px"
-                                >
-                                    <FaNodeJs />
-                                </Box>  
+
+                                    <Box>
+                                        {skills.map((skill, index) => (
+                                            <>
+                                                <Box
+                                                    p            = "16px" 
+                                                    mx           = "5px"
+                                                    mb           = "5px"
+                                                    key          = {skill.name}
+                                                    color        = "cyan"
+                                                    width        = "fit-content"
+                                                    border       = "4px solid green"   
+                                                    display      = "inline-block"
+                                                    fontSize     = "2em"
+                                                    transition   = "width 2s"
+                                                    borderRadius = "1000px"
+                                                    // _hover       = {{
+                                                    //     width: "49em"
+                                                    // }}
+                                                >
+                                                    {skill.icon}
+                                                </Box>
+                                                {(index+1) % 5  === 0 ? <br /> : null} 
+                                            </>
+                                        ))}
+                                    </Box>
                             </Stack>
                         </GridItem>
                     </Grid>
