@@ -21,6 +21,7 @@ import SectionContent from '../components/Section/SectionContent';
 // Decoratvie styling tags hehe
 import H1 from '../components/StylingTags/H1';
 import P from '../components/StylingTags/P';
+import SkillBadge from '../components/Skills/SkillsBadge';
 
 const Skills: NextPage = () => {
 
@@ -203,21 +204,9 @@ const Skills: NextPage = () => {
                                                 <Box>
                                                     {programmingSkills.map((skill, index) => (
                                                     <>
-                                                        <Box
-                                                            p            = "16px" 
-                                                            mx           = "5px"
-                                                            mb           = "5px"
-                                                            key          = {skill.name}
-                                                            color        = {randomNeonColor1()}
-                                                            width        = "fit-content"
-                                                            border       = {`4px solid ${randomNeonColor2()}`}   
-                                                            display      = "inline-block"
-                                                            fontSize     = "2em"
-                                                            transition   = "width 2s"
-                                                            borderRadius = "1000px"
-                                                        >
+                                                        <SkillBadge>
                                                             {skill.icon}
-                                                        </Box>
+                                                        </SkillBadge>
                                                         {(index+1) % 5  === 0 ? <br /> : null} 
                                                     </>
                                                     ))}
@@ -227,21 +216,9 @@ const Skills: NextPage = () => {
                                                 <Box>
                                                     {libraries.map((skill, index) => (
                                                     <>
-                                                        <Box
-                                                            p            = "16px" 
-                                                            mx           = "5px"
-                                                            mb           = "5px"
-                                                            key          = {skill.name}
-                                                            color        = {randomNeonColor1()}
-                                                            width        = "fit-content"
-                                                            border       = {`4px solid ${randomNeonColor2()}`}   
-                                                            display      = "inline-block"
-                                                            fontSize     = "2em"
-                                                            transition   = "width 2s"
-                                                            borderRadius = "1000px"
-                                                        >
+                                                        <SkillBadge>
                                                             {skill.icon}
-                                                        </Box>
+                                                        </SkillBadge>
                                                         {(index+1) % 4  === 0 ? <br /> : null} 
                                                     </>
                                                     ))}
@@ -251,21 +228,9 @@ const Skills: NextPage = () => {
                                                 <Box>
                                                     {tools.map((skill, index) => (
                                                     <>
-                                                        <Box
-                                                            p            = "16px" 
-                                                            mx           = "5px"
-                                                            mb           = "5px"
-                                                            key          = {skill.name}
-                                                            color        = {randomNeonColor1()}
-                                                            width        = "fit-content"
-                                                            border       = {`4px solid ${randomNeonColor2()}`}   
-                                                            display      = "inline-block"
-                                                            fontSize     = "2em"
-                                                            transition   = "width 2s"
-                                                            borderRadius = "1000px"
-                                                        >
+                                                        <SkillBadge>
                                                             {skill.icon}
-                                                        </Box>
+                                                        </SkillBadge>
                                                         {(index+1) % 5  === 0 ? <br /> : null} 
                                                     </>
                                                     ))}
@@ -275,21 +240,9 @@ const Skills: NextPage = () => {
                                                 <Box>
                                                     {databases.map((skill, index) => (
                                                     <>
-                                                        <Box
-                                                            p            = "16px" 
-                                                            mx           = "5px"
-                                                            mb           = "5px"
-                                                            key          = {skill.name}
-                                                            color        = {randomNeonColor1()}
-                                                            width        = "fit-content"
-                                                            border       = {`4px solid ${randomNeonColor2()}`}   
-                                                            display      = "inline-block"
-                                                            fontSize     = "2em"
-                                                            transition   = "width 2s"
-                                                            borderRadius = "1000px"
-                                                        >
+                                                        <SkillBadge>
                                                             {skill.icon}
-                                                        </Box>
+                                                        </SkillBadge>
                                                         {(index+1) % 5  === 0 ? <br /> : null} 
                                                     </>
                                                     ))}
