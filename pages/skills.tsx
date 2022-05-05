@@ -7,6 +7,7 @@ import { Text, Box, Heading,
 import { SiJavascript, SiTypescript } from "react-icons/si";
 import { FaNodeJs, FaReact, FaPython, FaGithub } from "react-icons/fa";
 import Section from '../components/Section';
+import {randomNeonColor1, randomNeonColor2} from "../components/randomNeonColor";
 import SectionContent from '../components/Section/SectionContent';
 // Decoratvie styling tags hehe
 import H1 from '../components/StylingTags/H1';
@@ -91,16 +92,15 @@ const Skills: NextPage = () => {
 
                                     <Box>
                                         {skills.map((skill, index) => (
-                                            <Box
-                                            key          = {skill.name}
-                                            >
+                                            <>
                                                 <Box
                                                     p            = "16px" 
                                                     mx           = "5px"
                                                     mb           = "5px"
-                                                    color        = "cyan"
+                                                    key          = {skill.name}
+                                                    color        = {randomNeonColor1()}
                                                     width        = "fit-content"
-                                                    border       = "4px solid green"   
+                                                    border       = {`4px solid ${randomNeonColor2()}`}   
                                                     display      = "inline-block"
                                                     fontSize     = "2em"
                                                     transition   = "width 2s"
@@ -109,7 +109,7 @@ const Skills: NextPage = () => {
                                                     {skill.icon}
                                                 </Box>
                                                 {(index+1) % 5  === 0 ? <br /> : null} 
-                                            </Box>
+                                            </>
                                         ))}
                                     </Box>
                             </Stack>
