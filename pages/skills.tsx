@@ -91,12 +91,13 @@ const Skills: NextPage = () => {
 
                                     <Box>
                                         {skills.map((skill, index) => (
-                                            <>
+                                            <Box
+                                            key          = {skill.name}
+                                            >
                                                 <Box
                                                     p            = "16px" 
                                                     mx           = "5px"
                                                     mb           = "5px"
-                                                    key          = {skill.name}
                                                     color        = "cyan"
                                                     width        = "fit-content"
                                                     border       = "4px solid green"   
@@ -104,14 +105,11 @@ const Skills: NextPage = () => {
                                                     fontSize     = "2em"
                                                     transition   = "width 2s"
                                                     borderRadius = "1000px"
-                                                    // _hover       = {{
-                                                    //     width: "49em"
-                                                    // }}
                                                 >
                                                     {skill.icon}
                                                 </Box>
                                                 {(index+1) % 5  === 0 ? <br /> : null} 
-                                            </>
+                                            </Box>
                                         ))}
                                     </Box>
                             </Stack>
