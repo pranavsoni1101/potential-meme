@@ -2,10 +2,19 @@ import { NextPage } from 'next';
 import React from 'react';
 import Head from 'next/head';
 import { Text, Box, Heading, 
-         Grid, GridItem, Stack,
+         Grid, GridItem, Stack, 
+         Button, Tabs, TabList, 
+         Tab, TabPanels, TabPanel,
        } from '@chakra-ui/react';
-import { SiJavascript, SiTypescript } from "react-icons/si";
-import { FaNodeJs, FaReact, FaPython, FaGithub } from "react-icons/fa";
+import { SiTypescript, SiNetlify, SiJavascript, 
+         SiMysql, SiChakraui, SiNextdotjs,
+         SiMaterialui, SiExpress, 
+        } from "react-icons/si"
+import { DiMongodb, DiLinux } from "react-icons/di";
+import { FaNodeJs, FaReact, FaPython, 
+         FaGithub, FaWindows, FaJava, 
+         FaBootstrap 
+        } from "react-icons/fa";
 import Section from '../components/Section';
 import {randomNeonColor1, randomNeonColor2} from "../components/randomNeonColor";
 import SectionContent from '../components/Section/SectionContent';
@@ -15,27 +24,86 @@ import P from '../components/StylingTags/P';
 
 const Skills: NextPage = () => {
 
-    const skills = [
+
+    const programmingSkills = [
         {
-            name: "NodeJS",
-            icon: <FaNodeJs />
+            name: "Javascript",
+            icon: <SiJavascript />
         },
         {
-            name: "React",
-            icon: <FaReact />
+            name: "Typescript",
+            icon: <SiTypescript />
         },
         {
             name: "Python",
             icon: <FaPython />
         },
         {
+            name: "Java",
+            icon: <FaJava />
+        },
+    ]
+
+    const libraries = [
+        {
+            name: "NodeJS",
+            icon: <FaNodeJs />
+        },
+        {
+            name: "ReactJS",
+            icon: <FaReact />
+        },
+        {
+            name: "NextJS",
+            icon: <SiNextdotjs />
+        },
+        {
+            name: "ExpressJS",
+            icon: <SiExpress />
+        },
+        {
+            name: "Chakra Ui",
+            icon: <SiChakraui />
+        },
+        {
+            name: "Material Ui",
+            icon: <SiMaterialui />
+        },
+        {
+            name: "Bootstrap",
+            icon: <FaBootstrap />
+        },
+    ]
+
+    const tools = [
+        
+        {
             name: "GitHub",
             icon: <FaGithub />
         },
         {
-            name: "Typescript",
-            icon: <FaNodeJs />
+            name: "Netlify",
+            icon: <SiNetlify />
+        },
+        {
+            name: "Linux",
+            icon: <DiLinux />
+        },
+        {
+            name: "Windows",
+            icon: <FaWindows />
         }
+    ];
+    
+    const databases = [
+        {
+            name: "MongoDb",
+            icon: <DiMongodb />
+        },
+        {
+            name: "Mysql",
+            icon: <SiMysql />
+        },
     ]
 
     return(
@@ -84,35 +152,151 @@ const Skills: NextPage = () => {
                             colEnd   = {12} 
                             colStart = {8}
                         >
-                            <Stack
-                                spacing ={5}
-                                direction = {['column', 'row']}
-                                paddingTop = "1em"
-                            >
-
-                                    <Box>
-                                        {skills.map((skill, index) => (
-                                            <>
-                                                <Box
-                                                    p            = "16px" 
-                                                    mx           = "5px"
-                                                    mb           = "5px"
-                                                    key          = {skill.name}
-                                                    color        = {randomNeonColor1()}
-                                                    width        = "fit-content"
-                                                    border       = {`4px solid ${randomNeonColor2()}`}   
-                                                    display      = "inline-block"
-                                                    fontSize     = "2em"
-                                                    transition   = "width 2s"
-                                                    borderRadius = "1000px"
-                                                >
-                                                    {skill.icon}
-                                                </Box>
-                                                {(index+1) % 5  === 0 ? <br /> : null} 
-                                            </>
-                                        ))}
-                                    </Box>
-                            </Stack>
+                                <Tabs
+                                    colorScheme =   "cyan"
+                                    // orientation='vertical'
+                                >
+                                    <TabList>
+                                        <Tab
+                                            _focus={{
+                                                boxShadow: "none",
+                                            }}
+                                            _active={{
+                                                bg: "none"
+                                            }}
+                                        >
+                                            Programming Languages
+                                        </Tab>
+                                        <Tab
+                                            _focus={{
+                                                boxShadow: "none",
+                                            }}
+                                            _active={{
+                                                bg: "none"
+                                            }}
+                                        >
+                                            Libraries / Framework
+                                        </Tab>
+                                        <Tab
+                                            _focus={{
+                                                boxShadow: "none",
+                                            }}
+                                            _active={{
+                                                bg: "none"
+                                            }}
+                                        >
+                                            Tools
+                                        </Tab>
+                                        <Tab
+                                            _focus={{
+                                                boxShadow: "none",
+                                            }}
+                                            _active={{
+                                                bg: "none"
+                                            }}
+                                        >
+                                            Databases
+                                        </Tab>
+                                    </TabList>
+                                        <TabPanels p="12px">
+                                            <TabPanel>
+                                                <Box>
+                                                    {programmingSkills.map((skill, index) => (
+                                                    <>
+                                                        <Box
+                                                            p            = "16px" 
+                                                            mx           = "5px"
+                                                            mb           = "5px"
+                                                            key          = {skill.name}
+                                                            color        = {randomNeonColor1()}
+                                                            width        = "fit-content"
+                                                            border       = {`4px solid ${randomNeonColor2()}`}   
+                                                            display      = "inline-block"
+                                                            fontSize     = "2em"
+                                                            transition   = "width 2s"
+                                                            borderRadius = "1000px"
+                                                        >
+                                                            {skill.icon}
+                                                        </Box>
+                                                        {(index+1) % 5  === 0 ? <br /> : null} 
+                                                    </>
+                                                    ))}
+                                                </Box> 
+                                            </TabPanel>
+                                            <TabPanel>
+                                                <Box>
+                                                    {libraries.map((skill, index) => (
+                                                    <>
+                                                        <Box
+                                                            p            = "16px" 
+                                                            mx           = "5px"
+                                                            mb           = "5px"
+                                                            key          = {skill.name}
+                                                            color        = {randomNeonColor1()}
+                                                            width        = "fit-content"
+                                                            border       = {`4px solid ${randomNeonColor2()}`}   
+                                                            display      = "inline-block"
+                                                            fontSize     = "2em"
+                                                            transition   = "width 2s"
+                                                            borderRadius = "1000px"
+                                                        >
+                                                            {skill.icon}
+                                                        </Box>
+                                                        {(index+1) % 4  === 0 ? <br /> : null} 
+                                                    </>
+                                                    ))}
+                                                </Box> 
+                                            </TabPanel>
+                                            <TabPanel>
+                                                <Box>
+                                                    {tools.map((skill, index) => (
+                                                    <>
+                                                        <Box
+                                                            p            = "16px" 
+                                                            mx           = "5px"
+                                                            mb           = "5px"
+                                                            key          = {skill.name}
+                                                            color        = {randomNeonColor1()}
+                                                            width        = "fit-content"
+                                                            border       = {`4px solid ${randomNeonColor2()}`}   
+                                                            display      = "inline-block"
+                                                            fontSize     = "2em"
+                                                            transition   = "width 2s"
+                                                            borderRadius = "1000px"
+                                                        >
+                                                            {skill.icon}
+                                                        </Box>
+                                                        {(index+1) % 5  === 0 ? <br /> : null} 
+                                                    </>
+                                                    ))}
+                                                </Box> 
+                                            </TabPanel>
+                                            <TabPanel>
+                                                <Box>
+                                                    {databases.map((skill, index) => (
+                                                    <>
+                                                        <Box
+                                                            p            = "16px" 
+                                                            mx           = "5px"
+                                                            mb           = "5px"
+                                                            key          = {skill.name}
+                                                            color        = {randomNeonColor1()}
+                                                            width        = "fit-content"
+                                                            border       = {`4px solid ${randomNeonColor2()}`}   
+                                                            display      = "inline-block"
+                                                            fontSize     = "2em"
+                                                            transition   = "width 2s"
+                                                            borderRadius = "1000px"
+                                                        >
+                                                            {skill.icon}
+                                                        </Box>
+                                                        {(index+1) % 5  === 0 ? <br /> : null} 
+                                                    </>
+                                                    ))}
+                                                </Box> 
+                                            </TabPanel>
+                                        </TabPanels>
+                                </Tabs>
                         </GridItem>
                     </Grid>
                 </SectionContent>
