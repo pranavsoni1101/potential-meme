@@ -6,106 +6,17 @@ import { Text, Box, Heading,
          Button, Tabs, TabList, 
          Tab, TabPanels, TabPanel,
        } from '@chakra-ui/react';
-import { SiTypescript, SiNetlify, SiJavascript, 
-         SiMysql, SiChakraui, SiNextdotjs,
-         SiMaterialui, SiExpress, 
-        } from "react-icons/si"
-import { DiMongodb, DiLinux } from "react-icons/di";
-import { FaNodeJs, FaReact, FaPython, 
-         FaGithub, FaWindows, FaJava, 
-         FaBootstrap 
-        } from "react-icons/fa";
 import Section from '../components/Section';
-import {randomNeonColor1, randomNeonColor2} from "../components/randomNeonColor";
 import SectionContent from '../components/Section/SectionContent';
 // Decoratvie styling tags hehe
 import H1 from '../components/StylingTags/H1';
 import P from '../components/StylingTags/P';
 import SkillBadge from '../components/Skills/SkillsBadge';
+import { AnimatePresence } from 'framer-motion';
+
+import { databases, programmingSkills, libraries, tools } from '../components/Skills/dataHelper';
 
 const Skills: NextPage = () => {
-
-
-    const programmingSkills = [
-        {
-            name: "Javascript",
-            icon: <SiJavascript />
-        },
-        {
-            name: "Typescript",
-            icon: <SiTypescript />
-        },
-        {
-            name: "Python",
-            icon: <FaPython />
-        },
-        {
-            name: "Java",
-            icon: <FaJava />
-        },
-    ]
-
-    const libraries = [
-        {
-            name: "NodeJS",
-            icon: <FaNodeJs />
-        },
-        {
-            name: "ReactJS",
-            icon: <FaReact />
-        },
-        {
-            name: "NextJS",
-            icon: <SiNextdotjs />
-        },
-        {
-            name: "ExpressJS",
-            icon: <SiExpress />
-        },
-        {
-            name: "Chakra Ui",
-            icon: <SiChakraui />
-        },
-        {
-            name: "Material Ui",
-            icon: <SiMaterialui />
-        },
-        {
-            name: "Bootstrap",
-            icon: <FaBootstrap />
-        },
-    ]
-
-    const tools = [
-        
-        {
-            name: "GitHub",
-            icon: <FaGithub />
-        },
-        {
-            name: "Netlify",
-            icon: <SiNetlify />
-        },
-        {
-            name: "Linux",
-            icon: <DiLinux />
-        },
-        {
-            name: "Windows",
-            icon: <FaWindows />
-        }
-    ];
-    
-    const databases = [
-        {
-            name: "MongoDb",
-            icon: <DiMongodb />
-        },
-        {
-            name: "Mysql",
-            icon: <SiMysql />
-        },
-    ]
 
     return(
         <>
@@ -154,8 +65,8 @@ const Skills: NextPage = () => {
                             colStart = {8}
                         >
                                 <Tabs
-                                    colorScheme =   "cyan"
-                                    // orientation='vertical'
+                                    isLazy      = {true}
+                                    colorScheme = "cyan"
                                 >
                                     <TabList>
                                         <Tab
@@ -203,48 +114,60 @@ const Skills: NextPage = () => {
                                             <TabPanel>
                                                 <Box>
                                                     {programmingSkills.map((skill, index) => (
-                                                    <>
-                                                        <SkillBadge>
-                                                            {skill.icon}
-                                                        </SkillBadge>
-                                                        {(index+1) % 5  === 0 ? <br /> : null} 
-                                                    </>
+                                                        <Box
+                                                            key     = {index} 
+                                                            display = "inline-block"
+                                                        >
+                                                            <SkillBadge>
+                                                                {skill.icon}
+                                                            </SkillBadge>
+                                                            {(index+1) % 5  === 0 ? <br /> : null} 
+                                                        </Box>
                                                     ))}
                                                 </Box> 
                                             </TabPanel>
                                             <TabPanel>
                                                 <Box>
                                                     {libraries.map((skill, index) => (
-                                                    <>
-                                                        <SkillBadge>
-                                                            {skill.icon}
-                                                        </SkillBadge>
-                                                        {(index+1) % 4  === 0 ? <br /> : null} 
-                                                    </>
+                                                        <Box
+                                                        key     = {index}
+                                                            display="inline-block"
+                                                        >
+                                                            <SkillBadge>
+                                                                {skill.icon}
+                                                            </SkillBadge>
+                                                            {(index+1) % 4  === 0 ? <br /> : null} 
+                                                        </Box>
                                                     ))}
                                                 </Box> 
                                             </TabPanel>
                                             <TabPanel>
                                                 <Box>
                                                     {tools.map((skill, index) => (
-                                                    <>
-                                                        <SkillBadge>
-                                                            {skill.icon}
-                                                        </SkillBadge>
-                                                        {(index+1) % 5  === 0 ? <br /> : null} 
-                                                    </>
+                                                        <Box
+                                                        key     = {index}
+                                                            display="inline-block"
+                                                        >
+                                                            <SkillBadge>
+                                                                {skill.icon}
+                                                            </SkillBadge>
+                                                            {(index+1) % 5  === 0 ? <br /> : null} 
+                                                        </Box>
                                                     ))}
                                                 </Box> 
                                             </TabPanel>
                                             <TabPanel>
                                                 <Box>
                                                     {databases.map((skill, index) => (
-                                                    <>
+                                                    <Box
+                                                        key     = {index}
+                                                        display = "inline-block"
+                                                    >
                                                         <SkillBadge>
                                                             {skill.icon}
                                                         </SkillBadge>
                                                         {(index+1) % 5  === 0 ? <br /> : null} 
-                                                    </>
+                                                    </Box>
                                                     ))}
                                                 </Box> 
                                             </TabPanel>
