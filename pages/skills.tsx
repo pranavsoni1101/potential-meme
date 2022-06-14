@@ -140,7 +140,7 @@ const Skills: NextPage = () => {
                                                                 <SkillBadge>
                                                                     {skill.icon}
                                                                 </SkillBadge>
-                                                                {(index+1) % 4  === 0 ? <br /> : null} 
+                                                                {(index+1) % 5  === 0 ? <br /> : null} 
                                                             </Box>
                                                         ))}
                                                     </Box> 
