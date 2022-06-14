@@ -15,6 +15,7 @@ import SkillBadge from '../components/Skills/SkillsBadge';
 import { AnimatePresence } from 'framer-motion';
 
 import { databases, programmingSkills, libraries, tools } from '../components/Skills/dataHelper';
+import TabPanelContent from '../components/Skills/TabPanelContent';
 
 const Skills: NextPage = () => {
 
@@ -112,10 +113,62 @@ const Skills: NextPage = () => {
                                     </TabList>
                                         <TabPanels p="12px">
                                             <TabPanel>
-                                                <Box>
-                                                    {programmingSkills.map((skill, index) => (
+                                                <TabPanelContent>
+                                                    <Box>
+                                                        {programmingSkills.map((skill, index) => (
+                                                            <Box
+                                                                key     = {index} 
+                                                                display = "inline-block"
+                                                            >
+                                                                <SkillBadge>
+                                                                    {skill.icon}
+                                                                </SkillBadge>
+                                                                {(index+1) % 5  === 0 ? <br /> : null} 
+                                                            </Box>
+                                                        ))}
+                                                    </Box> 
+                                                </TabPanelContent>
+                                            </TabPanel>
+                                            <TabPanel>
+                                                <TabPanelContent>
+                                                    <Box>
+                                                        {libraries.map((skill, index) => (
+                                                            <Box
+                                                            key     = {index}
+                                                                display="inline-block"
+                                                            >
+                                                                <SkillBadge>
+                                                                    {skill.icon}
+                                                                </SkillBadge>
+                                                                {(index+1) % 4  === 0 ? <br /> : null} 
+                                                            </Box>
+                                                        ))}
+                                                    </Box> 
+                                                </TabPanelContent>
+                                            </TabPanel>
+                                            <TabPanel>
+                                                <TabPanelContent>
+                                                    <Box>
+                                                        {tools.map((skill, index) => (
+                                                            <Box
+                                                            key     = {index}
+                                                                display="inline-block"
+                                                            >
+                                                                <SkillBadge>
+                                                                    {skill.icon}
+                                                                </SkillBadge>
+                                                                {(index+1) % 5  === 0 ? <br /> : null} 
+                                                            </Box>
+                                                        ))}
+                                                    </Box> 
+                                                </TabPanelContent>
+                                            </TabPanel>
+                                            <TabPanel>
+                                                <TabPanelContent>
+                                                    <Box>
+                                                        {databases.map((skill, index) => (
                                                         <Box
-                                                            key     = {index} 
+                                                            key     = {index}
                                                             display = "inline-block"
                                                         >
                                                             <SkillBadge>
@@ -123,53 +176,9 @@ const Skills: NextPage = () => {
                                                             </SkillBadge>
                                                             {(index+1) % 5  === 0 ? <br /> : null} 
                                                         </Box>
-                                                    ))}
-                                                </Box> 
-                                            </TabPanel>
-                                            <TabPanel>
-                                                <Box>
-                                                    {libraries.map((skill, index) => (
-                                                        <Box
-                                                        key     = {index}
-                                                            display="inline-block"
-                                                        >
-                                                            <SkillBadge>
-                                                                {skill.icon}
-                                                            </SkillBadge>
-                                                            {(index+1) % 4  === 0 ? <br /> : null} 
-                                                        </Box>
-                                                    ))}
-                                                </Box> 
-                                            </TabPanel>
-                                            <TabPanel>
-                                                <Box>
-                                                    {tools.map((skill, index) => (
-                                                        <Box
-                                                        key     = {index}
-                                                            display="inline-block"
-                                                        >
-                                                            <SkillBadge>
-                                                                {skill.icon}
-                                                            </SkillBadge>
-                                                            {(index+1) % 5  === 0 ? <br /> : null} 
-                                                        </Box>
-                                                    ))}
-                                                </Box> 
-                                            </TabPanel>
-                                            <TabPanel>
-                                                <Box>
-                                                    {databases.map((skill, index) => (
-                                                    <Box
-                                                        key     = {index}
-                                                        display = "inline-block"
-                                                    >
-                                                        <SkillBadge>
-                                                            {skill.icon}
-                                                        </SkillBadge>
-                                                        {(index+1) % 5  === 0 ? <br /> : null} 
-                                                    </Box>
-                                                    ))}
-                                                </Box> 
+                                                        ))}
+                                                    </Box> 
+                                                </TabPanelContent>
                                             </TabPanel>
                                         </TabPanels>
                                 </Tabs>
