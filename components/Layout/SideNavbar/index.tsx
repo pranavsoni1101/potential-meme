@@ -1,13 +1,16 @@
+import React, { ReactNode } from 'react';
 import { Box, BoxProps, Flex, 
          useDisclosure, Text, CloseButton,  
          Drawer, Link, DrawerContent,
          Divider, IconButton, VStack, HStack, 
+         FlexProps, 
 } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from "react-icons/fa";
-import React, { ReactNode } from 'react';
+import { IoMenuOutline} from 'react-icons/io5';
+import { AiOutlineMenu } from "react-icons/ai";
 import Logo from "../../../images/logo.svg";
 
-// Declaring Sidebar Links
+// Declaring SidebarContent Links
 const LinkItems: Array<string> = [
     "about", 
     "work",
@@ -21,7 +24,7 @@ const SideNavbar = () => {
     return(
         <>
             <Box>
-                <Sidebar 
+                <SidebarContent 
                     onClose = {() => onClose}
                     display = {{base: "none", md: "block"}}
                 />
@@ -35,9 +38,14 @@ const SideNavbar = () => {
                     returnFocusOnClose = {false}  
                 >
                     <DrawerContent>
-                        <Sidebar onClose={onClose} />
+                        <SidebarContent onClose={onClose} />
                     </DrawerContent>
                 </Drawer>
+                {/* Mobile Nav */}
+                <MobileNav  
+                    display={{base: "flex", md: "none"}}
+                    onOpen = {onOpen}
+                />
             </Box>
         </>
     )
@@ -47,7 +55,7 @@ interface SidebarProps extends BoxProps {
     onClose: () => void;
 }
 
-const Sidebar = ({onClose, ...rest}: SidebarProps) => {
+const SidebarContent = ({onClose, ...rest}: SidebarProps) => {
     return(
         <Box
             w                = {{base: 'full', md: 40}}
@@ -62,19 +70,28 @@ const Sidebar = ({onClose, ...rest}: SidebarProps) => {
                 <Box 
                     as     = {Link}
                     href   = "/"
-                    margin = "2em auto 80% auto"
-
+                    margin = "2em auto"
+                    paddingLeft="10%"
                     _focus = {{
                         boxShadow: "none"
                     }}
                 >
                     <Logo />
                 </Box>
-                <CloseButton 
-                    display = {{ base: "flex", md: "none" }}
-                    onClick = {onClose}
-                />
+                    <CloseButton 
+                        display = {{ base: "flex", md: "none" }}
+                        marginRight = "2em"
+                        marginTop="2em"
+                        onClick = {onClose}
+                        _hover = {{
+                            color: "rgba(42,238,234)"
+                        }}
+                    />
             </Flex>
+            <br />
+            <br />
+            <br />
+            <br />
             <Divider 
                 borderColor= "#A63446"
             />
@@ -206,5 +223,36 @@ const NavItem = ({children, link, ...rest}: NavItemProps) => {
         </>
     )
 }
+
+interface MobileProps extends FlexProps {
+    onOpen: () => void;
+  }
+const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
+    return (
+        <Flex
+            ml={{ base: 0, md: 60 }}
+            px={{ base: 4, md: 24 }}
+            height="20"
+            alignItems="center"
+            justifyContent="flex-end"
+            {...rest}>
+            <IconButton
+                icon       = {<AiOutlineMenu />}
+                variant    = "ghost"
+                fontSize   = "1.2em"
+                color      = "white"
+                onClick    = {onOpen}
+                aria-label = "open menu"
+                _hover     ={{
+                    bg: "none",
+                    color: "rgba(42,238,234)"
+                }}
+                _focus     ={{
+                    bg: "none"
+                }}
+            />
+      </Flex>
+    )
+  }
 
 export default SideNavbar;

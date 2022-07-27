@@ -2,7 +2,7 @@ import React from 'react';
 
 import { SiTypescript, SiNetlify, SiJavascript, 
     SiMysql, SiChakraui, SiNextdotjs,
-    SiMaterialui, SiExpress, SiVisualstudiocode
+    SiMaterialui, SiExpress, SiVisualstudiocode, SiDart
    } from "react-icons/si"
 import { DiMongodb, DiLinux } from "react-icons/di";
 import { FaNodeJs, FaReact, FaPython, 
@@ -22,6 +22,10 @@ export const programmingSkills = [
     {
         name: "Python",
         icon: <FaPython />
+    },
+    {
+        name: "Dart",
+        icon: <SiDart />
     },
     {
         name: "Java",
